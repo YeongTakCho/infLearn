@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <script>
+        //array
+        let ranking = ["jason", "alice", "chris"]
+        console.log(ranking)
+        console.log(ranking[0])
+
+        ranking.push("additional")
+        console.log(ranking)
+
+        console.log(ranking.includes("jason"))
+
+        console.log(ranking.indexOf("json"))
+
+        //object
+        let userData = {
+            name: 'Jason',
+            age: 25,
+            gender: 'Male'
+        }
+
+        console.log(userData.name + userData.age)
+
+        //object - Dot notation
+        userData.name = 'Alice'
+        console.log(userData.name)
+
+        //object - Bracket notation
+        userData["name"] = 'Chris'
+        console.log(userData.name)
+
+        //Object.keys(), Object.values()
+
+        console.log(Object.keys(userData))
+        console.log(Object.values(userData))
+
+        console.log()
+
+
+        userData.favarite = ["rice", "meat", "noodles"]
+        console.log(userData)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

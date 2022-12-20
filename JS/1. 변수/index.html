@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+
+    <script>
+
+        let l1 = "tak"
+        console.log(l1)
+
+        //let let1 = "tak1" <error>
+
+        l1 = "tak1"
+        console.log(l1) //재할당 가능
+
+
+        //const c1 <error>, 선언과 초기화를 동시에 진행
+        const c1 = "tak"
+        //재할당 금지
+        //c1 = "tak1" error
+
+        const c2 = {
+            name: "tak"
+        }
+        //const는 재할당을 금지하지만 불변은 아니다.
+        c2.name = "tak1"
+        console.log(c2)
+
+        //var 사용 자제
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

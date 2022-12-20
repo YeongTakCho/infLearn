@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     <title>D-Day</title>
     <script>
-        console.log("script 태그를 실행했어요")
+      //value of document.querySelector('#target-year-input ')
+      //<input id="target-year-input" class="target-input" />
+
+      // type of document.querySelector('#target-year-input ')
+      // object
+
+      const dateForMaker = function () {
+        const inputYear = document.querySelector("#target-year-input").value;
+        const inputMonth = document.querySelector("#target-month-input").value;
+        const inputDate = document.querySelector("#target-date-input").value;
+
+        console.log(inputYear, inputMonth, inputDate);
+      };
+
+      const counterMake = function () {
+        const nowDate = new Date();
+        console.log(nowDate);
+        console.log(typeof nowDate);
+        console.log(Object.keys(nowDate));
+        console.log(Object.values(nowDate));
+      };
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     안녕하세요. 반갑습니다.
-    <div id="div-id" class="div-class"> 안녕하세요</div>
-    <span style="color:red;">잘 부탁드립니다</span>
-    <input />
-    <button>버튼</button>
-</body>
-
+    <div id="div-id" class="div-class">안녕하세요</div>
+    <span style="color: red">잘 부탁드립니다!</span>
+    <input id="target-year-input" class="target-input" />
+    <input id="target-month-input" class="target-input" />
+    <input id="target-date-input" class="target-input" />
+    <button onclick="counterMake()">버튼</button>
+  </body>
 </html>

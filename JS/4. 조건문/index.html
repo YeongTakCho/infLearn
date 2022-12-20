@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>D-Day</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      const dateForMaker = function () {
+        const inputYear = document.querySelector("#target-year-input").value;
+        const inputMonth = document.querySelector("#target-month-input").value;
+        const inputDate = document.querySelector("#target-date-input").value;
+
+        const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
+
+        return dateFormat;
+      };
+
+      const counterMake = function () {
+        const targetDateInput = dateForMaker();
+
+        const nowDate = new Date();
+        const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0);
+        const remaining = (targetDate - nowDate) / 1000;
+
+        const remainDate = Math.floor(remaining / 3600 / 24);
+        const remainHour = Math.floor(remaining / 3600) % 24;
+        const remainMin = Math.floor(remaining / 60) % 60;
+        const remainSec = Math.floor(remaining) % 60;
+
+        console.log(
+          remainDate +
+            "일" +
+            remainHour +
+            "시간" +
+            remainMin +
+            "분" +
+            remainSec +
+            "초"
+        );
+      };
+    </script>
+  </head>
+
+  <body>
+    <h1>D-Day</h1>
+    <div id="d-day-container">
+      <div class="d-day-child-container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="hours">0</span>
+        <span>시간</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="min">0</span>
+        <span>분</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="sec">0</span>
+        <span>초</span>
+      </div>
+    </div>
+    <div id="target-selector">
+      <input id="target-year-input" class="target-input" size="5" /> -
+      <input id="target-month-input" class="target-input" size="5" /> -
+      <input id="target-date-input" class="target-input" size="5" />
+    </div>
+    <button id="start-btn" onclick="counterMake()">카운트다운 시작</button>
+  </body>
+</html>
