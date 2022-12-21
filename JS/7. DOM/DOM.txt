@@ -1,0 +1,2 @@
+DOM(Document Object Model)
+- 브라우저가 HTML문서를 파싱하는 과정에서 생겨나는 객체
