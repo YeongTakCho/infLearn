@@ -21,21 +21,27 @@
         const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0);
         const remaining = (targetDate - nowDate) / 1000;
 
-        const remainDate = Math.floor(remaining / 3600 / 24);
-        const remainHour = Math.floor(remaining / 3600) % 24;
-        const remainMin = Math.floor(remaining / 60) % 60;
-        const remainSec = Math.floor(remaining) % 60;
+        if (isNaN(remaining)) {
+          console.log("적합한 시간이 아닙니다");
+        } else if (remaining <= 0) {
+          console.log("타이머가 종료되었습니다");
+        } else {
+          const remainDate = Math.floor(remaining / 3600 / 24);
+          const remainHour = Math.floor(remaining / 3600) % 24;
+          const remainMin = Math.floor(remaining / 60) % 60;
+          const remainSec = Math.floor(remaining) % 60;
 
-        console.log(
-          remainDate +
-            "일" +
-            remainHour +
-            "시간" +
-            remainMin +
-            "분" +
-            remainSec +
-            "초"
-        );
+          console.log(
+            remainDate +
+              "일" +
+              remainHour +
+              "시간" +
+              remainMin +
+              "분" +
+              remainSec +
+              "초"
+          );
+        }
       };
     </script>
   </head>
